@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+*{
+margin: 0;
+padding: 0;
+text-decoration: none;
+box-sizing: border-box;
+}
+body{
+    scroll-behavior: smooth;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 10px 90px;
+    box-sizing: border-box;
+    z-index: 999;
+    backdrop-filter: blur(3px);
+}
+nav .logo{
+    float: left;
+}
+nav ul{
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: start;
+    margin-left: 20%;
+    
+}
+nav ul li a{
+    line-height: 80px;
+    color: #fff;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-size:16PX;
+    border-bottom:5PX solid rgba(255, 255, 255, 0) ;
+    transition:  0.3s ease-in-out;
+}
+nav ul li a span{
+    color: #FABC3F;
+    transition:  0.3s ease-in-out;
+}
+nav ul li a:hover{
+    border-bottom:5PX solid #FABC3F ;
+    color: #FABC3F;
+}
+nav ul li a:active{
+    border-bottom:5PX solid #808080 ;
+    color: #808080;
+    transition: 0.1s;
+}
+.Portfolio{
+    width: 130PX;
+    height: 40PX;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 700;
+    background-color: #ffffff00;
+    border-radius: 12PX;
+    border: 2PX solid white;
+    color: #fff;
+    font-size: 12PX;
+    transition: 0.5s ease-in-out;
+    margin-left: 210%;
+    margin-top: 15%;
+
+}
+.Portfolio:hover{
+    color: rgb(0, 0, 0);
+    border: 2PX solid rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);            
+}
+.Portfolio:active{
+    background-color: #c5c5c5;
+    border: 2PX solid #c5c5c5;
+    transition: 0.1s;
+}
+.menu-icon {
+  display: none; /* Initially hidden */
+}
+/* Responsive for mobile */
+@media screen and (max-width: 968px) {
+  nav {
+      padding: 10px 20px;
+  }
+
+  nav ul {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100px;
+      left: 140px;
+      background-color: rgba(0, 0, 0, 0.9);
+      width: 40%;
+      padding-left: 0;
+      border:1px solid #fff;
+  }
+
+  nav ul li {
+      margin-left: 0;
+      text-align: center;
+      width: 100%;
+  }
+
+  nav ul li a {
+      line-height: 40px;
+      padding: 10px;
+      display: block;
+  }
+
+  nav .menu-icon {
+      display: block;
+      position: absolute;
+      top: 30px;
+      right: 20px;
+      cursor: pointer;
+      font-size: 30px;
+      color: white;
+  }
+
+  .Portfolio {
+      margin-left: 5%;
+      margin-top: 10px;
+  }
+  .allcards{
+   overflow-x: auto;
+  }
+  .images{
+    overflow-x: auto;
+  }
+}
+
+/* Show menu when active */
+.menu-active ul {
+  display: flex;
+}
+.main{
+    background: url('images/omarserieposter.jpg');
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.maininfo{
+    position: relative;
+    top: 20%;
+    margin-left: 10%;
+}
+.maininfo h4{
+    color: #fff;
+    font-size: 25PX;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    letter-spacing: 1PX;
+}
+.maininfo h6{
+  color: #fff;
+  font-size: 11PX;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 200;
+  letter-spacing: 1PX;
+  width: 25%;
+  height: 45%;
+  margin-top:5px ;
+  overflow-y: auto;
+}
+.maininfo .aboutthisfilm{
+    display: flex;
+    word-spacing: 15PX;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 100;
+    color: #fff;
+}
+.buttons {
+    margin-top: 1%;  
+}
+.btn1{
+    cursor: pointer;
+    width: 150PX;
+    height: 45PX;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    background-color: rgb(230, 4, 4);
+    border-radius: 30PX;
+    border: 2PX solid rgb(230, 4, 4);
+    color: #fff;
+    font-size: 12PX;
+    transition: 0.3s ease-in-out;
+}
+.btn1:hover{
+    background-color: #000000;
+    border: 2PX solid rgb(0, 0, 0);
+    color: white;
+}
+.btn2{
+    cursor: pointer;
+    width: 150PX;
+    height: 45PX;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    background-color: #ffffff00;
+    border-radius: 30PX;
+    border: 2PX solid white;
+    color: #fff;
+    font-size: 12PX;
+    transition: 0.3s ease-in-out;
+}
+.btn2:hover{
+    box-shadow: 0 0 30px 5px #FABC3F;
+    background-color: #FABC3F;
+    border: 2PX solid #FABC3F;
+}
+.story{
+    background: url(images/BGABOUT.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+    height: 90vh;
+    width: 100%;
+}
+ .title {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    color: #fff;
+    font-size: 25PX;
+    text-align: center;
+    position: relative;
+    top: 20PX;
+}
+ .title span{
+    color: #FABC3F;
+}
+.text{
+    position: relative;
+    top: 13%;
+    color: #fff;
+}
+.text h1{
+    font-family: "Oswald", sans-serif;
+    font-size: 40PX;
+    text-align: center;
+}
+.text p{
+    position: relative;
+    left: 30%;
+    text-align: center;
+    font-size: 13PX;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    overflow-y: auto;
+    width: 40%;
+    height: 350PX;
+    letter-spacing: 0.5PX;
+}
+.text p span{
+    color: #FABC3F;
+}
+.images {
+    overflow: hidden;
+    background-color: #000000;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.imagesfromserie {
+    cursor: pointer;
+    width: 40%;
+    height: 350PX;
+    margin: 50PX 100PX;
+    display: flex;
+    justify-content: center;
+    gap: 10PX;
+    position: relative;
+    left: 20%;
+}
+.imagesfromserie img{
+    width: 6em;
+    height: 20em;
+    object-fit: cover;
+    border-radius:10PX;
+    border: 1PX SOLID WHITE;
+    transition: all ease 1s;
+    filter: grayscale(100%);
+}
+.imagesfromserie img:hover{
+width: 80EM;
+filter: grayscale(0%);
+}
+
+
+
+@media screen and (max-width: 960px) {
+  .main{
+    background-position-x: -100px;
+  }
+  .story{
+    background-position-x: -100px;
+  }
+  .maininfo h6{
+    width: 90%;
+    margin-top: 2%;
+    margin-bottom: 4%;
+  }
+  .text p {
+    width: 90%;
+    position: relative;
+    left: 5%;
+  }
+  .images{
+    overflow-x: auto;
+  }
+  .imagesfromserie{
+    justify-content: start;
+    position: relative;
+    left: -20%;
+  }
+  .allcards{
+    gap: 30px;
+    height: 30vh;
+  }
+  .allcards img {
+    height: 30vh;
+  }
+}
+.others{
+  background-color: #000000;
+  height: 90vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.title2{
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    color: #fff;
+    font-size: 15PX;
+    text-align: center;
+    position: relative;
+    top: 20PX;
+}
+.allcards{
+    position: relative;
+    top: 10%;
+    cursor: pointer;
+    height: 70vh;
+    width: 100%;
+}
+.card{
+    width: 253px;
+    height: 62vh;
+    background-color: #5050503d;
+    border-radius:12PX;
+    transition: all 0.5s;
+    border: 2px solid white;
+    box-shadow: rgb(255, 255, 255) 0px 20px 30px -10px;
+}
+.card:hover{
+    transform: translateY(15px);
+}
+.card img{
+    border-radius:10px 10px 0px 0px;
+}
+.title4{
+    font-size: 17PX;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+} 
+.card p {
+    font-size: 13PX;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    color: #a8a8a8;
+}
+.card button{
+    width: 80%;
+    height: 6vh;
+    position: relative;
+    left: 10%;
+    border-radius: 20px;
+    border: 2px solid white;
+    font-size: 13PX;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    color: #fff;
+    background-color: #ffffff00;
+    transition: all 0.5s;
+}
+.card button:hover{
+    background-color: #fff;
+    color: #000000;
+}
+footer{
+    width: 100%;
+    height: 5vh;
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    font-size: 13PX;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    text-align: center;
+}
+footer span{
+    color: #FABC3F;
+}
+footer div {
+    position: relative;
+    top: 5px;
+}
+footer div a {
+    font-size: 18px;
+    color: white;
+}
